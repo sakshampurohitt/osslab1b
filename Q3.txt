@@ -1,0 +1,36 @@
+Repository URL: Graph-Algorithms
+
+Overview:
+This repository contains various graph algorithms, including Dijkstra's algorithm. Below is the documentation for the dijkstra.cpp file, which demonstrates the implementation of Dijkstra's shortest path algorithm.
+
+File Structure
+dijkstra.cpp - Implements Dijkstra's algorithm for finding the shortest paths from a source vertex to all other vertices in a weighted graph.
+Key Functions in dijkstra.cpp
+dijkstra(int source, vector<vector<pair<int, int>>>& graph)
+
+Purpose: Computes the shortest paths from the source vertex to all other vertices in the graph using Dijkstra's algorithm.
+
+Parameters:
+
+source: The starting vertex for the shortest path computation.
+graph: An adjacency list representation of the graph, where graph[u] contains pairs of (v, w) indicating an edge from vertex u to vertex v with weight w.
+Returns: A vector dist where dist[i] holds the shortest distance from the source to vertex i.
+
+Implementation Details:
+
+Initializes a priority queue (min-heap) to store vertices and their current shortest distance.
+Initializes a dist vector with INFINITY to represent the initial distances.
+Sets the distance to the source vertex as 0 and starts the priority queue with the source vertex.
+Iterates over the priority queue, updating the shortest path estimates for each vertex.
+For each vertex, processes its neighbors and updates their distances if a shorter path is found.
+Continues until all vertices have been processed.
+main()
+
+Purpose: The entry point of the program that sets up the graph and calls the Dijkstra function.
+
+Implementation Details:
+
+Reads the number of vertices and edges from the input.
+Constructs the graph using the adjacency list format.
+Calls the dijkstra function with a specified source vertex.
+Outputs the shortest distances from the source vertex to all other vertices.
